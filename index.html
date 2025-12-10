@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DELAMERE DAIRY FARM</title>
 
-    <!-- Browser Tab Logo -->
     <link rel="icon" type="image/png" href="your-logo.png">
-
-    <!-- BOXICONS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <style>
@@ -21,7 +18,6 @@
             font-size: 20px;
         }
 
-        /* MAIN COLOR THEME */
         :root {
             --primary: #2f5f3b;
             --primary-light: #3f7a4e;
@@ -30,73 +26,85 @@
             --border: #d4d9d2;
         }
 
-        /* ⭐ IMPROVED HEADER STYLE */
+        /* ⭐ NEW MODERN HEADER STYLE ⭐ */
         header {
-            position: fixed;
+            position: sticky;
             top: 0;
+            background: rgba(47, 95, 59, 0.97);
             width: 100%;
-            height: 95px;
-            background: rgba(47, 95, 59, 0.82);
-            color: white;
+            z-index: 1200;
+            padding: 12px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        /* Header inner container */
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            width: 100%;
+            max-width: 1100px;
             padding: 0 20px;
-            font-size: 38px;
-            font-weight: 800;
-            z-index: 1000;
-            letter-spacing: 1px;
-            backdrop-filter: blur(6px);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.25);
         }
 
-        .logo {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .logo img {
+        /* Logo */
+        .header-logo img {
             width: 75px;
             height: 75px;
             border-radius: 10px;
             object-fit: cover;
         }
 
-        header h1 {
+        /* Text block */
+        .header-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.1;
+        }
+
+        .header-text h1 {
+            font-size: 34px;
+            color: #fff;
             margin: 0;
-            padding: 0;
-            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .header-text p {
+            margin: 5px 0 0 0;
+            color: #e7ffe7;
+            font-size: 18px;
         }
 
         /* SUBHEADER */
         .subheader {
-            position: fixed;
-            top: 95px;
+            position: sticky;
+            top: 108px;
             width: 100%;
-            text-align: center;
             background: var(--primary-light);
-            color: #ffffff;
+            color: #fff;
+            text-align: center;
             padding: 12px 0;
-            font-size: 22px;
+            font-size: 20px;
             z-index: 999;
         }
 
-        /* MAIN CONTENT */
+        /* CONTENT */
         .container {
             width: 92%;
             max-width: 1100px;
             margin: auto;
-            padding-top: 175px;
+            padding-top: 50px;
         }
 
-        /* TITLES */
         h2, h4 {
             font-size: 32px;
             color: var(--primary);
             font-weight: 700;
-            margin-bottom: 18px;
         }
 
         p, li {
@@ -104,7 +112,6 @@
             line-height: 1.7;
         }
 
-        /* BOX SECTIONS */
         .section {
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -114,7 +121,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        /* GALLERY GRID */
+        /* GALLERY */
         .gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -141,8 +148,7 @@
             font-size: 22px;
             font-weight: bold;
             color: #2f5f3b;
-            margin-top: 8px;
-            margin-bottom: 12px;
+            margin: 10px 0;
         }
 
         .buy-btn {
@@ -150,9 +156,8 @@
             color: #fff;
             padding: 12px 28px;
             border-radius: 10px;
-            text-decoration: none;
             font-size: 20px;
-            margin-top: 12px;
+            text-decoration: none;
             display: inline-block;
         }
 
@@ -165,82 +170,62 @@
             background: var(--primary);
             color: #fff;
             text-align: center;
-            padding: 25px 20px;
+            padding: 30px 20px;
             margin-top: 40px;
-            font-size: 18px;
         }
 
-        footer i {
-            font-size: 22px;
-            vertical-align: middle;
+        footer p i {
             margin-right: 8px;
         }
 
-        /* WHATSAPP BUTTON */
-        .whatsapp-float {
+        /* FLOAT BUTTONS */
+        .whatsapp-float, .call-float {
             position: fixed;
             width: 70px;
             height: 70px;
-            bottom: 25px;
             right: 25px;
-            background: #25D366;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
-            z-index: 1002;
-        }
-
-        .whatsapp-float img {
-            width: 48px;
-            height: 48px;
-        }
-
-        /* CALL BUTTON */
-        .call-float {
-            position: fixed;
-            width: 70px;
-            height: 70px;
-            bottom: 110px;
-            right: 25px;
-            background: #2f5f3b;
             border-radius: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
             box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
             z-index: 1001;
-            color: white;
-            font-size: 46px;
-            text-decoration: none;
         }
 
-        /* ⭐ MOBILE FIX FOR LOGO + TITLE */
+        .whatsapp-float {
+            bottom: 25px;
+            background: #25D366;
+        }
+
+        .whatsapp-float img {
+            width: 48px;
+        }
+
+        .call-float {
+            bottom: 110px;
+            background: #2f5f3b;
+            color: white;
+            font-size: 46px;
+        }
+
+        /* MOBILE OPTIMIZATION */
         @media (max-width: 480px) {
-            header {
-                height: 80px;
-                font-size: 24px;
-            }
-
-            .logo img {
-                width: 50px;
-                height: 50px;
-            }
-
-            header h1 {
+            .header-text h1 {
                 font-size: 22px;
-                letter-spacing: 0.5px;
+            }
+
+            .header-text p {
+                font-size: 14px;
+            }
+
+            .header-logo img {
+                width: 55px;
+                height: 55px;
             }
 
             .subheader {
-                top: 80px;
-                font-size: 16px;
-                padding: 8px 5px;
-            }
-
-            .container {
-                padding-top: 155px;
+                font-size: 14px;
+                padding: 8px;
             }
         }
     </style>
@@ -248,10 +233,112 @@
 
 <body>
 
-<!-- HEADER -->
+<!-- ⭐ IMPROVED HEADER ⭐ -->
 <header>
-    <div class="logo">
-        <img src="logo.jfif" alt="Farm Logo">
+    <div class="header-content">
+        <div class="header-logo">
+            <img src="pure calves 1/logo.jfif" alt="Farm Logo">
+        </div>
+
+        <div class="header-text">
+            <h1>DELAMERE DAIRY FARM</h1>
+            <p>Kenya Agricultural & Livestock Research Organisation</p>
+        </div>
     </div>
-    <h1>DELAMERE DAIRY FARM</h1>
 </header>
+
+<!-- SUBHEADER -->
+<div class="subheader">
+    Premium livestock for farmers nationwide — quality calves, goats, rams & dairy cows.
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <div class="section">
+        <h2>Welcome to Delamere Dairy Farm</h2>
+        <p>
+            We specialize in supplying strong, healthy, productive livestock including dairy calves,
+            Dorper sheep, rams, goats, and high-yielding Fresian cows. Our farm prioritizes quality,
+            genetics, and reliable performance.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Our Livestock Categories</h2>
+        <ul>
+            <li>Pure healthy calves (4–7 months)</li>
+            <li>Registered Dorper lambs</li>
+            <li>Dorper rams (ready to serve)</li>
+            <li>Second-calving Fresian dairy cows</li>
+            <li>Quality dairy goats</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Livestock Gallery</h2>
+
+        <div class="gallery">
+
+            <div class="gallery-box">
+                <img src="pure calves 1/pu1.jfif">
+                <h4>Pure Calves</h4>
+                <div class="price-tag">KSh @25k–@67k • 4–7 months</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="gallery-box">
+                <img src="pure calves 1/rigisterd doper.jfif">
+                <h4>Registered Dorper</h4>
+                <div class="price-tag">KSh 6k–10k • 3–5 months</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="gallery-box">
+                <img src="pure calves 1/second calving.jfif">
+                <h4>Second Calving (Incalf)</h4>
+                <div class="price-tag">KSh 165k–245k • 7.5 months incalf</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="gallery-box">
+                <img src="pure calves 1/every farmers dream goat.jfif">
+                <h4>Farmer’s Dream Goat</h4>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <div class="gallery-box">
+                <img src="pure calves 1/registerd dopper 11.jfif">
+                <h4>Registered Dorper Ram</h4>
+                <div class="price-tag">KSh 10k–50k • Ready to serve</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <h2 style="font-size:26px;">Contact Us</h2>
+
+    <p><i class="bx bx-phone"></i><b>Phone:</b> 0735007665 / 0208355659</p>
+    <p><i class="bx bxl-whatsapp"></i><b>WhatsApp:</b> 0735007665</p>
+    <p><i class="bx bx-envelope"></i><b>Email:</b> delameredairyfarm1@gmail.com</p>
+    <p><i class="bx bx-map"></i><b>Location:</b> Naivasha, Delamere Farm</p>
+
+    <br>
+    <p>© 2025 Delamere Dairy Farm — All Rights Reserved</p>
+</footer>
+
+<!-- FLOAT BUTTONS -->
+<a href="tel:0735007665" class="call-float">
+    <i class="bx bx-phone-call"></i>
+</a>
+
+<a href="https://wa.me/254735007665" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+</body>
+</html>
