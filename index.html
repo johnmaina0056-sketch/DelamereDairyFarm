@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="your-logo.png">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
+   
     <style>
         /* GENERAL */
         body {
@@ -16,6 +17,11 @@
             background: #f3f5f1;
             color: #2e332d;
             font-size: 20px;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        html {
+            overflow-x: hidden; /* Extra protection */
         }
 
         :root {
@@ -35,13 +41,12 @@
             z-index: 1200;
             padding: 12px 0;
             box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden; /* prevents inner shifts */
         }
 
-        /* Header inner container */
         .header-content {
             display: flex;
             align-items: center;
@@ -49,6 +54,7 @@
             width: 100%;
             max-width: 1100px;
             padding: 0 20px;
+            overflow: hidden; /* keep content bounded */
         }
 
         /* Logo */
@@ -65,6 +71,7 @@
             flex-direction: column;
             align-items: flex-start;
             line-height: 1.1;
+            overflow: hidden;
         }
 
         .header-text h1 {
@@ -72,6 +79,9 @@
             color: #fff;
             margin: 0;
             letter-spacing: 1px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /* crop if needed */
         }
 
         .header-text p {
@@ -91,6 +101,7 @@
             padding: 12px 0;
             font-size: 20px;
             z-index: 999;
+            overflow: hidden;
         }
 
         /* CONTENT */
@@ -99,6 +110,7 @@
             max-width: 1100px;
             margin: auto;
             padding-top: 50px;
+            overflow-x: hidden;
         }
 
         h2, h4 {
@@ -107,11 +119,7 @@
             font-weight: 700;
         }
 
-        p, li {
-            font-size: 21px;
-            line-height: 1.7;
-        }
-
+        /* SECTIONS */
         .section {
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -119,6 +127,7 @@
             padding: 30px;
             margin-bottom: 35px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
 
         /* GALLERY */
@@ -126,6 +135,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 22px;
+            overflow: hidden;
         }
 
         .gallery-box {
@@ -135,6 +145,7 @@
             border: 1px solid var(--border);
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+            overflow: hidden;
         }
 
         .gallery-box img {
@@ -161,10 +172,6 @@
             display: inline-block;
         }
 
-        .buy-btn:hover {
-            background: var(--primary-light);
-        }
-
         /* FOOTER */
         footer {
             background: var(--primary);
@@ -172,13 +179,10 @@
             text-align: center;
             padding: 30px 20px;
             margin-top: 40px;
+            overflow: hidden;
         }
 
-        footer p i {
-            margin-right: 8px;
-        }
-
-        /* FLOAT BUTTONS */
+        /* FLOAT BUTTON STYLES */
         .whatsapp-float, .call-float {
             position: fixed;
             width: 70px;
@@ -195,10 +199,6 @@
         .whatsapp-float {
             bottom: 25px;
             background: #25D366;
-        }
-
-        .whatsapp-float img {
-            width: 48px;
         }
 
         .call-float {
@@ -228,6 +228,7 @@
                 padding: 8px;
             }
         }
+
     </style>
 </head>
 
@@ -342,5 +343,6 @@
 
 </body>
 </html>
+
 
 
